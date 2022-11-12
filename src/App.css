@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/* General */
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Home Page */
+.wacky-button {
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.wacky-button-text {
+  color: #fffcf4;
+  margin: "auto";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.welcome-button {
+  background-size: 300px;
+  left: 100px;
+  width: 300px;
+  height: 120px;
+  z-index: 2;
+}
+
+.welcome-button-text {
+  font-family: "Lantinghei SC";
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.about-button {
+  background-size: 200px;
+  width: 200px;
+  height: 120px;
+}
+
+.about-button-text {
+  font-family: "Lemon";
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.portfolio-button {
+  background-size: 200px;
+  width: 200px;
+  height: 120px;
+}
+
+.portfolio-button-text {
+  font-family: "Marko One";
+  font-size: 28px;
+  font-weight: 400;
+}
+/* Home Page */
+
+.nav-link {
+  font-size: large;
+  margin: 20px;
+  align-self: flex-end;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    align-self: center;
   }
 }
