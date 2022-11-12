@@ -14,39 +14,44 @@ function bounce(
 ) {
   let leftDif = targetLeft - currentLeft;
   let topDif = targetTop - currentTop;
-  let leftInc = leftDif / 20;
-  let topInc = topDif / 20;
+  let leftInc = leftDif / 10;
+  let topInc = topDif / 10;
   let time = 0;
-  let momentum = 20;
+  let momentum = 22;
+  let leftOverflowDist = leftDif / 2;
+  let topOverflowDist = topDif / 2;
 
-  for (let i = 1; i < 21; i++) {
+  for (let i = 1; i < 11; i++) {
     setTimeout(() => {
-      setLeftState(currentLeft + leftInc * i);
-      setTopState(currentTop + topInc * i);
+      setLeftState((prev) => prev + leftInc);
+      setTopState((prev) => prev + topInc);
     }, time);
     time += 5;
   }
 
-  leftInc = leftDif / 40;
-  topInc = topDif / 40;
-
-  for (let i = momentum; i > 5; i = i / 2) {
+  for (let i = momentum; i > 4; i = i / 2) {
     momentum = i;
+
+    let leftInc = leftOverflowDist / momentum;
+    let topInc = topOverflowDist / momentum;
     for (let i = momentum; i > 0; i--) {
       setTimeout(() => {
-        setLeftState(targetLeft + leftInc * i);
-        setTopState(targetTop + topInc * i);
+        setLeftState((prev) => prev + leftInc);
+        setTopState((prev) => prev + topInc);
       }, time);
-      time += 20 - momentum;
+      time += 26 - momentum;
     }
 
     for (let i = momentum; i > 0; i--) {
       setTimeout(() => {
-        setLeftState(targetLeft - leftInc * i);
-        setTopState(targetTop - topInc * i);
+        setLeftState((prev) => prev - leftInc);
+        setTopState((prev) => prev - topInc);
       }, time);
-      time += 20 - momentum;
+      time += 26 - momentum;
     }
+
+    leftOverflowDist = leftOverflowDist / 3;
+    topOverflowDist = topOverflowDist / 3;
   }
 
   setTimeout(() => {
