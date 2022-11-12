@@ -4,59 +4,51 @@ import aboutImg from "../images/about-button.svg";
 import portfolioImg from "../images/portfolio-button.svg";
 import { useEffect, useState } from "react";
 
-function bounce(
-  currentLeft,
-  currentTop,
-  targetLeft,
-  targetTop,
-  setLeftState,
-  setTopState
-) {
-  let leftDif = targetLeft - currentLeft;
-  let topDif = targetTop - currentTop;
-  let leftInc = leftDif / 10;
-  let topInc = topDif / 10;
+function bounce(startX, startY, targetX, targetY, setXState, setYState) {
+  let xDifference = targetX - startX;
+  let yDiffference = targetY - startY;
+  let xOverflowDist = xDifference / 2;
+  let yOverflowDist = yDiffference / 2;
   let time = 0;
   let momentum = 22;
-  let leftOverflowDist = leftDif / 2;
-  let topOverflowDist = topDif / 2;
+
+  let xInc = xDifference / 10;
+  let yInc = yDiffference / 10;
 
   for (let i = 1; i < 11; i++) {
     setTimeout(() => {
-      setLeftState((prev) => prev + leftInc);
-      setTopState((prev) => prev + topInc);
+      setXState((prev) => prev + xInc);
+      setYState((prev) => prev + yInc);
     }, time);
     time += 5;
   }
 
-  for (let i = momentum; i > 4; i = i / 2) {
-    momentum = i;
-
-    let leftInc = leftOverflowDist / momentum;
-    let topInc = topOverflowDist / momentum;
+  for (momentum; momentum > 4; momentum = momentum / 2) {
+    let xInc = xOverflowDist / momentum;
+    let yInc = yOverflowDist / momentum;
     for (let i = momentum; i > 0; i--) {
       setTimeout(() => {
-        setLeftState((prev) => prev + leftInc);
-        setTopState((prev) => prev + topInc);
+        setXState((prev) => prev + xInc);
+        setYState((prev) => prev + yInc);
       }, time);
       time += 26 - momentum;
     }
 
     for (let i = momentum; i > 0; i--) {
       setTimeout(() => {
-        setLeftState((prev) => prev - leftInc);
-        setTopState((prev) => prev - topInc);
+        setXState((prev) => prev - xInc);
+        setYState((prev) => prev - yInc);
       }, time);
       time += 26 - momentum;
     }
 
-    leftOverflowDist = leftOverflowDist / 3;
-    topOverflowDist = topOverflowDist / 3;
+    xOverflowDist = xOverflowDist / 3;
+    yOverflowDist = yOverflowDist / 3;
   }
 
   setTimeout(() => {
-    setLeftState(targetLeft);
-    setTopState(targetTop);
+    setXState(targetX);
+    setYState(targetY);
   }, time);
 }
 
