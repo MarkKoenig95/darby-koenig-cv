@@ -9,8 +9,13 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-p {
+h1 {
   margin-bottom: 0;
+}
+
+p {
+  font-size: 12px;
+  font-family: "Poppins";
 }
 
 .col {
@@ -28,7 +33,7 @@ p {
   color: var(--white);
 }
 
-.navbar-brand {
+.navbar-brand h1 {
   color: var(--white);
   font-family: "Lantinghei SC";
   font-size: 28px;
@@ -65,12 +70,6 @@ p {
   justify-content: center;
 }
 
-.wacky-button-text {
-  color: var(--white);
-  margin: "auto";
-  text-decoration: "none";
-}
-
 .welcome-button {
   background-size: 300px;
   left: 100px;
@@ -80,6 +79,7 @@ p {
 }
 
 .welcome-button-text {
+  color: var(--white);
   font-family: "Lantinghei SC";
   font-size: 36px;
   font-weight: 700;
@@ -93,6 +93,7 @@ p {
 }
 
 .about-button-text {
+  color: var(--white);
   font-family: "Lemon";
   font-size: 24px;
   font-weight: 400;
@@ -106,6 +107,7 @@ p {
 }
 
 .portfolio-button-text {
+  color: var(--white);
   font-family: "Marko One";
   font-size: 28px;
   font-weight: 400;
@@ -125,3 +127,115 @@ p {
   font-weight: 700;
 }
 /* About Page */
+.about-title {
+  color: var(--blue);
+  font-family: "Lemon";
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.darby-pic {
+  padding: 20px;
+}
+
+.darby-pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lets-chat-button {
+  background-size: 190px;
+  width: 190px;
+  height: 80px;
+  margin-top: 30px;
+  align-self: center;
+}
+
+.lets-chat-button-text {
+  color: var(--white);
+  font-family: "Marko One";
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: -30px;
+  margin-top: 15px;
+}
+
+.lets-chat-button-chevron {
+  position: absolute;
+  right: 20px;
+}
+
+@media (max-width: 767px) {
+  .darby-pic {
+    margin-top: 75px;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 367px) {
+  .about-title {
+    font-size: 36px;
+  }
+  .darby-pic {
+    margin-top: 75px;
+    max-width: 100%;
+  }
+}
+
+/* Contact Page */
+
+.contact-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.contact-text {
+  text-align: center;
+}
+
+.linked-in-text {
+  color: var(--blue);
+  font-family: "Lilita One";
+  font-size: 48px;
+}
+
+.linked-in-button {
+  background-size: 406px;
+  width: 406px;
+  height: 348px;
+  margin-top: 30px;
+  align-self: center;
+}
+
+.linked-in-button-text {
+  color: var(--white);
+  font-family: "Lilita One";
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: -30px;
+  margin-top: 15px;
+}
+
+.linked-in-button-chevron {
+  position: absolute;
+  right: 20px;
+}
+
+.twitter-text {
+  color: var(--blue);
+  font-family: "Marko One";
+  font-size: 48px;
+}
+
+.email-text {
+  color: var(--blue);
+  font-family: "Lemon";
+  font-size: 48px;
+}

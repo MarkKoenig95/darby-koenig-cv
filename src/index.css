@@ -3,6 +3,9 @@
   --orange: #f36648;
   --white: #fffcf4;
 }
+html {
+  /* overflow: hidden; */
+}
 
 body {
   margin: 0;

@@ -43,7 +43,7 @@ export default function Header(props) {
     >
       <Container>
         <Navbar.Brand href="/">
-          <p>Darby K.</p>
+          <h1>Darby K.</h1>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
