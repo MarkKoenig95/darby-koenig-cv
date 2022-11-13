@@ -9,6 +9,53 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+p {
+  margin-bottom: 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.navbar-brand {
+  color: var(--white);
+  font-family: "Lantinghei SC";
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 56px;
+}
+
+.nav-link {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 500;
+  align-self: flex-end;
+  margin-left: 34px;
+  margin-right: 34px;
+}
+
+.nav-link.active {
+  color: var(--white) !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    align-self: center;
+  }
+}
+
 /* Home Page */
 .wacky-button {
   background-repeat: no-repeat;
@@ -19,8 +66,9 @@
 }
 
 .wacky-button-text {
-  color: #fffcf4;
+  color: var(--white);
   margin: "auto";
+  text-decoration: "none";
 }
 
 .welcome-button {
@@ -62,16 +110,18 @@
   font-size: 28px;
   font-weight: 400;
 }
-/* Home Page */
 
-.nav-link {
-  font-size: large;
-  margin: 20px;
-  align-self: flex-end;
+.home-title {
+  color: var(--blue);
+  font-family: "Lantinghei SC";
+  font-size: 48px;
+  font-weight: 700;
 }
 
-@media (max-width: 767px) {
-  .nav-link {
-    align-self: center;
-  }
+.home-subtitle {
+  color: var(--orange);
+  font-family: "Lantinghei SC";
+  font-size: 24px;
+  font-weight: 700;
 }
+/* About Page */

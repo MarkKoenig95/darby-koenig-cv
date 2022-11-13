@@ -3,6 +3,7 @@ import welcomeImg from "../images/welcome-button.svg";
 import aboutImg from "../images/about-button.svg";
 import portfolioImg from "../images/portfolio-button.svg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function bounce(startX, startY, targetX, targetY, setXState, setYState) {
   let xDifference = targetX - startX;
@@ -53,7 +54,8 @@ function bounce(startX, startY, targetX, targetY, setXState, setYState) {
 }
 
 function WackyButton(props) {
-  const { className, image, text, left, onClick, top, shouldBounce } = props;
+  const { className, image, text, left, onClick, path, top, shouldBounce } =
+    props;
 
   const [leftState, setLeftState] = useState(left);
   const [topState, setTopState] = useState(top);
@@ -67,17 +69,19 @@ function WackyButton(props) {
   }, [shouldBounce]);
 
   return (
-    <div
+    <Link
       className={"wacky-button " + className}
       style={{
         backgroundImage: `url(${image})`,
         left: leftState,
         top: topState,
+        textDecoration: "none",
       }}
       onClick={onClick}
+      to={path}
     >
       <p className={className + "-text wacky-button-text no-select"}>{text}</p>
-    </div>
+    </Link>
   );
 }
 
@@ -104,6 +108,7 @@ export default function WelcomeGroup() {
         <WackyButton
           className="about-button"
           image={aboutImg}
+          path="/about"
           text="About Me"
           left={90}
           top={-115}
@@ -112,6 +117,7 @@ export default function WelcomeGroup() {
         <WackyButton
           className="portfolio-button"
           image={portfolioImg}
+          path="/portfolio"
           text="Portfolio"
           left={-70}
           top={-100}

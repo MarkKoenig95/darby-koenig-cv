@@ -1,21 +1,21 @@
 import { useState } from "react";
-import { Container, Image, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 export default function Header(props) {
   const { currentPath } = props;
 
   const links = {
-    Home: "/",
-    "About Me": "/about",
-    Portfolio: "/portfolio",
-    Contact: "/contact",
+    "About Me": { path: "/about", font: "Lemon", fontSize: 20 },
+    Portfolio: { path: "/portfolio", font: "Marko One", fontSize: 22 },
+    Contact: { path: "/contact", font: "Lilita One", fontSize: 24 },
   };
 
   const [expanded, setExpanded] = useState(false);
 
   function getLinksFromEntries(entry) {
     let name = entry[0];
-    let path = entry[1];
+    let info = entry[1];
+    let { path, font, fontSize } = info;
     let active = path === currentPath ? " active" : "";
 
     return (
@@ -23,7 +23,11 @@ export default function Header(props) {
         key={name + path}
         className={"nav-link" + active}
         href={"/#" + path}
-        style={{ minWidth: "4rem" }}
+        style={{
+          minWidth: "8rem",
+          fontFamily: font,
+          fontSize: fontSize,
+        }}
         onClick={() => setExpanded(false)}
       >
         {name}
@@ -32,10 +36,14 @@ export default function Header(props) {
   }
 
   return (
-    <Navbar bg="light" expand="md" expanded={expanded}>
+    <Navbar
+      expand="md"
+      expanded={expanded}
+      style={{ display: currentPath !== "/" ? "flex" : "none" }}
+    >
       <Container>
         <Navbar.Brand href="/">
-          <img src="images/logo.png" width="110" height="125" alt="logo" />
+          <p>Darby K.</p>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -44,18 +52,6 @@ export default function Header(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {Object.entries(links).map(getLinksFromEntries)}
-            <Nav.Link
-              className="nav-link"
-              href="https://facebook.com/gansoftwashing"
-            >
-              <Image src="images/icon_facebook.png" width="30" height="30" />
-            </Nav.Link>
-            <Nav.Link
-              className="nav-link"
-              href="https://instagram.com/gansoftwashing"
-            >
-              <Image src="images/icon_instagram.png" width="30" height="30" />
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
