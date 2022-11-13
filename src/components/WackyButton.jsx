@@ -4,7 +4,6 @@ import bounce from "../logic/bounce";
 
 export default function WackyButton(props) {
   const {
-    absolute,
     children,
     className,
     image,
@@ -13,17 +12,38 @@ export default function WackyButton(props) {
     onClick,
     path,
     top,
+    reverse,
     shouldBounce,
   } = props;
 
-  const [leftState, setLeftState] = useState(left);
-  const [topState, setTopState] = useState(top);
+  const leftStart = reverse ? 0 : left;
+  const topStart = reverse ? 0 : top;
+
+  const leftTarget = reverse ? left : 0;
+  const topTarget = reverse ? top : 0;
+
+  const [leftState, setLeftState] = useState(leftStart);
+  const [topState, setTopState] = useState(topStart);
 
   useEffect(() => {
     if (shouldBounce) {
-      bounce(leftState, topState, 0, 0, setLeftState, setTopState);
+      bounce(
+        leftState,
+        topState,
+        leftTarget,
+        topTarget,
+        setLeftState,
+        setTopState
+      );
     } else {
-      bounce(leftState, topState, left, top, setLeftState, setTopState);
+      bounce(
+        leftState,
+        topState,
+        leftStart,
+        topStart,
+        setLeftState,
+        setTopState
+      );
     }
   }, [shouldBounce]);
 
@@ -33,7 +53,6 @@ export default function WackyButton(props) {
       style={{
         backgroundImage: `url(${image})`,
         left: leftState,
-        position: !absolute ? "relative" : "absolute",
         top: topState,
         textDecoration: "none",
       }}

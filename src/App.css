@@ -9,6 +9,10 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+button {
+  background-color: var(--white) !important;
+}
+
 h1 {
   margin-bottom: 0;
 }
@@ -200,6 +204,11 @@ p {
   text-align: center;
 }
 
+.contact-text-container {
+  align-items: flex-start;
+  padding-top: 15%;
+}
+
 .linked-in-text {
   color: var(--blue);
   font-family: "Lilita One";
@@ -210,22 +219,23 @@ p {
   background-size: 406px;
   width: 406px;
   height: 348px;
-  margin-top: 30px;
   align-self: center;
 }
 
 .linked-in-button-text {
   color: var(--white);
   font-family: "Lilita One";
-  font-size: 24px;
+  font-size: 48px;
   font-weight: 400;
-  margin-left: -30px;
-  margin-top: 15px;
+  margin-left: -50px;
+  margin-top: 80px;
+  text-decoration: underline;
 }
 
-.linked-in-button-chevron {
+.linked-in-button-icon {
   position: absolute;
-  right: 20px;
+  left: 129px;
+  top: 86px;
 }
 
 .twitter-text {
@@ -234,8 +244,110 @@ p {
   font-size: 48px;
 }
 
+.twitter-button {
+  background-size: 286px;
+  width: 286px;
+  height: 205px;
+  margin: auto;
+  align-self: center;
+}
+
+.twitter-button-text {
+  color: var(--white);
+  font-family: "Marko One";
+  font-size: 48px;
+  margin-left: -20px;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+
+.twitter-button-icon {
+  position: absolute;
+  top: 40px;
+  right: 67px;
+}
+
 .email-text {
   color: var(--blue);
   font-family: "Lemon";
   font-size: 48px;
+}
+
+.email-button {
+  background-size: 582px;
+  width: 582px;
+  height: 330px;
+  margin-left: -250px;
+  align-self: center;
+}
+
+.email-button-text {
+  color: var(--white);
+  font-family: "Lemon";
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 15px;
+  position: absolute;
+  left: 100px;
+  bottom: 120px;
+}
+
+.email-button-email {
+  color: var(--white);
+  font-family: "Lantinghei SC";
+  font-size: 36px;
+  position: absolute;
+  bottom: 77px;
+  left: 100px;
+}
+
+.background-cover {
+  background-color: rgba(0, 0, 0, 30%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  display: none;
+}
+
+@media (max-width: 1399px) {
+  .email-button {
+    margin-left: -300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .email-button {
+    margin-left: -350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wacky-contact-button-container {
+    position: absolute;
+    left: 170px;
+    bottom: -250px;
+  }
+  .email-button {
+    margin-left: -150px;
+    transform: scale(0.8);
+  }
+  .linked-in-button {
+    margin-left: -50px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 575px) {
+  .wacky-contact-button-container {
+    left: 0px;
+  }
+  .email-button {
+    margin: 0;
+    transform: scale(0.6);
+  }
+  .linked-in-button {
+    margin-left: 70px;
+    transform: scale(0.8);
+  }
 }
