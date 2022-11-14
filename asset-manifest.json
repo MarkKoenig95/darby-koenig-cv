@@ -1,9 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.098b5a24.css",
-    "main.js": "/static/js/main.dbfc0cad.js",
+    "main.css": "/static/css/main.7906b642.css",
+    "main.js": "/static/js/main.570f6ba0.js",
     "static/js/787.cfdad2c7.chunk.js": "/static/js/787.cfdad2c7.chunk.js",
+    "static/media/museum-app.jpg": "/static/media/museum-app.3a8d2b903dcd76233619.jpg",
+    "static/media/brew-city.jpg": "/static/media/brew-city.19d267e00a80824612dc.jpg",
+    "static/media/stalk-exchange.jpg": "/static/media/stalk-exchange.b0a7bd8eac16c80ea917.jpg",
+    "static/media/stalk-exchange-splash.png": "/static/media/stalk-exchange-splash.fc2f417c9f6b04df0878.png",
     "static/media/darby.png": "/static/media/darby.1a48d6de10848514f643.png",
+    "static/media/brew-city-splash.png": "/static/media/brew-city-splash.96b28b67d3052094744e.png",
+    "static/media/museum-app-splash.png": "/static/media/museum-app-splash.6016abd8dacd7a1f566e.png",
     "static/media/email-icon.svg": "/static/media/email-icon.c0c11c6e555ca13af453a6c63d01e552.svg",
     "index.html": "/index.html",
     "static/media/twitter-icon.svg": "/static/media/twitter-icon.863112fb077b934ef01835db9e8fed12.svg",
@@ -18,12 +24,12 @@
     "static/media/about-button.svg": "/static/media/about-button.533f1d0710620e2bd375c7be24009dc1.svg",
     "static/media/email-button.svg": "/static/media/email-button.92f13558a0b1323b2e467a1a350a69b7.svg",
     "static/media/chevron.svg": "/static/media/chevron.240ca602791c345abc39c53c56bf001a.svg",
-    "main.098b5a24.css.map": "/static/css/main.098b5a24.css.map",
-    "main.dbfc0cad.js.map": "/static/js/main.dbfc0cad.js.map",
+    "main.7906b642.css.map": "/static/css/main.7906b642.css.map",
+    "main.570f6ba0.js.map": "/static/js/main.570f6ba0.js.map",
     "787.cfdad2c7.chunk.js.map": "/static/js/787.cfdad2c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.098b5a24.css",
-    "static/js/main.dbfc0cad.js"
+    "static/css/main.7906b642.css",
+    "static/js/main.570f6ba0.js"
   ]
 }
