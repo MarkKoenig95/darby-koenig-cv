@@ -9,6 +9,10 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.page-container {
+  margin-top: 50px;
+}
+
 button {
   background-color: var(--white) !important;
 }
@@ -158,7 +162,7 @@ p {
   background-size: 190px;
   width: 190px;
   height: 80px;
-  margin-top: 30px;
+  margin: 30px;
   align-self: center;
 }
 
@@ -306,8 +310,11 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 0;
+  z-index: 1;
   display: none;
+}
+.wacky-contact-button-container {
+  z-index: 2;
 }
 
 @media (max-width: 1399px) {
@@ -343,11 +350,24 @@ p {
     left: 0px;
   }
   .email-button {
-    margin: 0;
+    margin-left: -120px;
     transform: scale(0.6);
   }
   .linked-in-button {
-    margin-left: 70px;
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 375px) {
+  .wacky-contact-button-container {
+    left: 0px;
+  }
+  .email-button {
+    margin-left: -150px;
+    transform: scale(0.5);
+  }
+
+  .twitter-button {
     transform: scale(0.8);
   }
 }

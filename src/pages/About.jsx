@@ -6,7 +6,7 @@ import chevron from "../images/chevron.svg";
 
 export default function About() {
   return (
-    <Container className="h-100" style={{ marginTop: -75 }}>
+    <Container className="h-100 page-container">
       <Row className="h-100 justify-content-around align-items-center">
         <Col className="darby-pic-container" sm={12} md={7}>
           <Image className="darby-pic" src={darbyPic} fluid />
@@ -40,7 +40,9 @@ export default function About() {
           <WackyButton
             className="lets-chat-button"
             image={letsChatImg}
-            path="/contact"
+            onClick={() => {
+              window.location.href = "/#/contact";
+            }}
             text="Let's Chat"
           >
             <Image className="lets-chat-button-chevron" src={chevron} fluid />

@@ -1,3 +1,5 @@
+import { Container } from "react-bootstrap";
+
 export default function Portfolio() {
-  return <div>Portfolio</div>;
+  return <Container className="h-100 page-container">Portfolio</Container>;
 }

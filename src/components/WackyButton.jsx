@@ -14,6 +14,7 @@ export default function WackyButton(props) {
     top,
     reverse,
     shouldBounce,
+    style,
   } = props;
 
   const leftStart = reverse ? 0 : left;
@@ -48,19 +49,19 @@ export default function WackyButton(props) {
   }, [shouldBounce]);
 
   return (
-    <Link
+    <div
       className={"wacky-button " + className}
       style={{
         backgroundImage: `url(${image})`,
         left: leftState,
         top: topState,
         textDecoration: "none",
+        ...style,
       }}
       onClick={onClick}
-      to={path}
     >
       {children}
       <p className={className + "-text no-select"}>{text}</p>
-    </Link>
+    </div>
   );
 }

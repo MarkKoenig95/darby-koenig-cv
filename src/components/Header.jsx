@@ -39,7 +39,13 @@ export default function Header(props) {
     <Navbar
       expand="md"
       expanded={expanded}
-      style={{ display: currentPath !== "/" ? "flex" : "none" }}
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        display: currentPath !== "/" ? "flex" : "none",
+        zIndex: 1,
+      }}
     >
       <Container>
         <Navbar.Brand href="/">

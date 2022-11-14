@@ -3,9 +3,6 @@
   --orange: #f36648;
   --white: #fffcf4;
 }
-html {
-  overflow: hidden;
-}
 
 body {
   background-color: var(--white);
