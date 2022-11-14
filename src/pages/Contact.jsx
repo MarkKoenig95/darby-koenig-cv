@@ -81,7 +81,7 @@ export default function Contact() {
             image={linkedInButton}
             onClick={() => {
               window.open(
-                "https://linkedin.com",
+                "http://www.linkedin.com/in/darbykoenig",
                 "_blank",
                 "noopener,noreferrer"
               );
@@ -102,7 +102,7 @@ export default function Contact() {
             image={twitterButton}
             onClick={() => {
               window.open(
-                "https://twitter.com",
+                "https://twitter.com/darby_koenig",
                 "_blank",
                 "noopener,noreferrer"
               );

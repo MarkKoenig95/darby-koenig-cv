@@ -43,7 +43,7 @@ p {
 
 .navbar-brand h1 {
   color: var(--white);
-  font-family: "Lantinghei SC";
+  font-family: var(--proffesional-font);
   font-size: 28px;
   font-weight: 700;
   margin-right: 56px;
@@ -88,7 +88,7 @@ p {
 
 .welcome-button-text {
   color: var(--white);
-  font-family: "Lantinghei SC";
+  font-family: var(--proffesional-font);
   font-size: 36px;
   font-weight: 700;
   margin-top: 15px;
@@ -102,7 +102,7 @@ p {
 
 .about-button-text {
   color: var(--white);
-  font-family: "Lemon";
+  font-family: var(--wacky-font);
   font-size: 24px;
   font-weight: 400;
   margin-top: 20px;
@@ -116,28 +116,28 @@ p {
 
 .portfolio-button-text {
   color: var(--white);
-  font-family: "Marko One";
+  font-family: var(--artsy-font);
   font-size: 28px;
   font-weight: 400;
 }
 
 .home-title {
   color: var(--blue);
-  font-family: "Lantinghei SC";
+  font-family: var(--proffesional-font);
   font-size: 48px;
   font-weight: 700;
 }
 
 .home-subtitle {
   color: var(--orange);
-  font-family: "Lantinghei SC";
+  font-family: var(--proffesional-font);
   font-size: 24px;
   font-weight: 700;
 }
 /* About Page */
 .about-title {
   color: var(--blue);
-  font-family: "Lemon";
+  font-family: var(--wacky-font);
   font-size: 48px;
   font-weight: 500;
   margin-bottom: 30px;
@@ -168,7 +168,7 @@ p {
 
 .lets-chat-button-text {
   color: var(--white);
-  font-family: "Marko One";
+  font-family: var(--artsy-font);
   font-size: 24px;
   font-weight: 400;
   margin-left: -30px;
@@ -215,7 +215,7 @@ p {
 
 .linked-in-text {
   color: var(--blue);
-  font-family: "Lilita One";
+  font-family: var(--lilitia-font);
   font-size: 48px;
 }
 
@@ -228,7 +228,7 @@ p {
 
 .linked-in-button-text {
   color: var(--white);
-  font-family: "Lilita One";
+  font-family: var(--lilitia-font);
   font-size: 48px;
   font-weight: 400;
   margin-left: -50px;
@@ -244,7 +244,7 @@ p {
 
 .twitter-text {
   color: var(--blue);
-  font-family: "Marko One";
+  font-family: var(--artsy-font);
   font-size: 48px;
 }
 
@@ -258,7 +258,7 @@ p {
 
 .twitter-button-text {
   color: var(--white);
-  font-family: "Marko One";
+  font-family: var(--artsy-font);
   font-size: 48px;
   margin-left: -20px;
   margin-top: 40px;
@@ -273,7 +273,7 @@ p {
 
 .email-text {
   color: var(--blue);
-  font-family: "Lemon";
+  font-family: var(--wacky-font);
   font-size: 48px;
 }
 
@@ -287,7 +287,7 @@ p {
 
 .email-button-text {
   color: var(--white);
-  font-family: "Lemon";
+  font-family: var(--wacky-font);
   font-size: 36px;
   font-weight: 400;
   margin-top: 15px;
@@ -298,7 +298,7 @@ p {
 
 .email-button-email {
   color: var(--white);
-  font-family: "Lantinghei SC";
+  font-family: var(--proffesional-font);
   font-size: 36px;
   position: absolute;
   bottom: 77px;
@@ -370,4 +370,9 @@ p {
   .twitter-button {
     transform: scale(0.8);
   }
+}
+
+/* Portfolio Page */
+.splash-button {
+  margin: 35px auto 35px auto;
 }

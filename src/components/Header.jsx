@@ -5,9 +5,13 @@ export default function Header(props) {
   const { currentPath } = props;
 
   const links = {
-    "About Me": { path: "/about", font: "Lemon", fontSize: 20 },
-    Portfolio: { path: "/portfolio", font: "Marko One", fontSize: 22 },
-    Contact: { path: "/contact", font: "Lilita One", fontSize: 24 },
+    "About Me": { path: "/about", font: "Lemon, sans-serif", fontSize: 20 },
+    Portfolio: {
+      path: "/portfolio",
+      font: "Marko One, sans-serif",
+      fontSize: 22,
+    },
+    Contact: { path: "/contact", font: "Lilita One, sans-serif", fontSize: 24 },
   };
 
   const [expanded, setExpanded] = useState(false);

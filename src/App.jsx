@@ -4,11 +4,25 @@ import { HashRouter, Switch, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import CaseStudy from "./pages/CaseStudy";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
+import portfolioInfo from "./logic/portfolioInfo";
 
 function Pages() {
   const location = useLocation();
+
+  function getRoutesFromEntries(entry) {
+    let path = entry[0];
+    let info = entry[1];
+    let { caseStudyImage } = info;
+
+    return (
+      <Route path={"/" + path} key={"route-" + path}>
+        <CaseStudy currentPath={location.pathname} />
+      </Route>
+    );
+  }
 
   return (
     <div className="App">
@@ -26,6 +40,7 @@ function Pages() {
         <Route path="/contact">
           <Contact />
         </Route>
+        {Object.entries(portfolioInfo).map(getRoutesFromEntries)}
       </Switch>
     </div>
   );

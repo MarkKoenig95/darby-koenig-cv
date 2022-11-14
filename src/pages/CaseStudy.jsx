@@ -1,22 +1,16 @@
 import { Container, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import portfolioInfo from "../logic/portfolioInfo";
 
-export default function Portfolio() {
+export default function CaseStudy(props) {
+  const { currentPath } = props;
+
   function getLinksFromEntries(entry) {
     let path = entry[0];
     let info = entry[1];
-    let { splashImage } = info;
+    let { caseStudyImage } = info;
 
-    return (
-      <Link
-        to={"/" + path}
-        className="splash-button"
-        key={"splash-button-" + path}
-      >
-        <Image src={splashImage} fluid />
-      </Link>
-    );
+    if (currentPath !== "/" + path) return <span key={"case-study-" + path} />;
+    return <Image src={caseStudyImage} fluid key={"case-study-" + path} />;
   }
 
   return (
