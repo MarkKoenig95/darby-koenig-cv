@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f66d023d.css",
-    "main.js": "/static/js/main.c4e36991.js",
+    "main.css": "/static/css/main.098b5a24.css",
+    "main.js": "/static/js/main.dbfc0cad.js",
     "static/js/787.cfdad2c7.chunk.js": "/static/js/787.cfdad2c7.chunk.js",
     "static/media/darby.png": "/static/media/darby.1a48d6de10848514f643.png",
     "static/media/email-icon.svg": "/static/media/email-icon.c0c11c6e555ca13af453a6c63d01e552.svg",
@@ -18,12 +18,12 @@
     "static/media/about-button.svg": "/static/media/about-button.533f1d0710620e2bd375c7be24009dc1.svg",
     "static/media/email-button.svg": "/static/media/email-button.92f13558a0b1323b2e467a1a350a69b7.svg",
     "static/media/chevron.svg": "/static/media/chevron.240ca602791c345abc39c53c56bf001a.svg",
-    "main.f66d023d.css.map": "/static/css/main.f66d023d.css.map",
-    "main.c4e36991.js.map": "/static/js/main.c4e36991.js.map",
+    "main.098b5a24.css.map": "/static/css/main.098b5a24.css.map",
+    "main.dbfc0cad.js.map": "/static/js/main.dbfc0cad.js.map",
     "787.cfdad2c7.chunk.js.map": "/static/js/787.cfdad2c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f66d023d.css",
-    "static/js/main.c4e36991.js"
+    "static/css/main.098b5a24.css",
+    "static/js/main.dbfc0cad.js"
   ]
 }
