@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7906b642.css",
-    "main.js": "/static/js/main.570f6ba0.js",
+    "main.css": "/static/css/main.b0239080.css",
+    "main.js": "/static/js/main.b973d661.js",
     "static/js/787.cfdad2c7.chunk.js": "/static/js/787.cfdad2c7.chunk.js",
     "static/media/museum-app.jpg": "/static/media/museum-app.3a8d2b903dcd76233619.jpg",
     "static/media/brew-city.jpg": "/static/media/brew-city.19d267e00a80824612dc.jpg",
@@ -19,17 +19,18 @@
     "static/media/lets-chat-button.svg": "/static/media/lets-chat-button.28c39806022d5dd1e5d29c73e5c71e3b.svg",
     "static/media/twitter-button.svg": "/static/media/twitter-button.46fd497f8ad661d44ae99155b9995029.svg",
     "static/media/portfolio-button.svg": "/static/media/portfolio-button.d09bd05b86af6aff46a585ae8de4362b.svg",
+    "static/media/download-resume-button.svg": "/static/media/download-resume-button.188c436853064e713ee449606a2899bb.svg",
     "static/media/linked-in-button.svg": "/static/media/linked-in-button.c55962d232fdd92ac72b5a74b82d0a69.svg",
     "static/media/welcome-button.svg": "/static/media/welcome-button.8afb1c45107c28fad016ecc8c75733fc.svg",
     "static/media/about-button.svg": "/static/media/about-button.533f1d0710620e2bd375c7be24009dc1.svg",
     "static/media/email-button.svg": "/static/media/email-button.92f13558a0b1323b2e467a1a350a69b7.svg",
     "static/media/chevron.svg": "/static/media/chevron.240ca602791c345abc39c53c56bf001a.svg",
-    "main.7906b642.css.map": "/static/css/main.7906b642.css.map",
-    "main.570f6ba0.js.map": "/static/js/main.570f6ba0.js.map",
+    "main.b0239080.css.map": "/static/css/main.b0239080.css.map",
+    "main.b973d661.js.map": "/static/js/main.b973d661.js.map",
     "787.cfdad2c7.chunk.js.map": "/static/js/787.cfdad2c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7906b642.css",
-    "static/js/main.570f6ba0.js"
+    "static/css/main.b0239080.css",
+    "static/js/main.b973d661.js"
   ]
 }
