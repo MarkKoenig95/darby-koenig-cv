@@ -3,15 +3,16 @@ import WackyButton from "../components/WackyButton";
 import darbyPic from "../images/darby.png";
 import letsChatImg from "../images/lets-chat-button.svg";
 import chevron from "../images/chevron.svg";
+import downloadResumeImg from "../images/download-resume-button.svg";
 
 export default function About() {
   return (
     <Container className="h-100 page-container">
       <Row className="h-100 justify-content-around align-items-center">
-        <Col className="darby-pic-container" sm={12} md={7}>
+        <Col className="darby-pic-container" sm={12} md={6}>
           <Image className="darby-pic" src={darbyPic} fluid />
         </Col>
-        <Col className="about-text-container" sm={12} md={5}>
+        <Col className="about-text-container" sm={12} md={6}>
           <h1 className="about-title">About Me</h1>
           <p>
             Im Darby Koenig and I'm brand new to the field of UI design, I've
@@ -36,17 +37,38 @@ export default function About() {
             so ever since I learned that UI was a field, it's something that
             I've really wanted to get into.
           </p>
-
-          <WackyButton
-            className="lets-chat-button"
-            image={letsChatImg}
-            onClick={() => {
-              window.location.href = "/#/contact";
-            }}
-            text="Let's Chat"
-          >
-            <Image className="lets-chat-button-chevron" src={chevron} fluid />
-          </WackyButton>
+          <Row className={"w-100"}>
+            <Col sm={6}>
+              <a
+                className="download-resume-link"
+                href="./files/Darby Koenig Resume.pdf"
+                download
+              >
+                <WackyButton
+                  className="download-resume-button"
+                  image={downloadResumeImg}
+                  onClick={() => {}}
+                  text="Download Resume"
+                />
+              </a>
+            </Col>
+            <Col sm={6}>
+              <WackyButton
+                className="lets-chat-button"
+                image={letsChatImg}
+                onClick={() => {
+                  window.location.href = "/#/contact";
+                }}
+                text="Let's Chat"
+              >
+                <Image
+                  className="lets-chat-button-chevron"
+                  src={chevron}
+                  fluid
+                />
+              </WackyButton>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Container>
